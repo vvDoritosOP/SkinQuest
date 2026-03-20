@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Concerns() {
   
@@ -43,15 +43,32 @@ export default function Concerns() {
         <TouchableOpacity 
         key={item.id} 
         onPress={() => toggleConcerns(item.id)}
-        style = {{backgroundColor: item.selected ? "green" : "transparent", padding: 10,  margin: 5, borderRadius: 10, borderWidth: 1,
-         }}
+        style = {[styles.card,  {backgroundColor: item.selected ? "green" : "#e9967a", 
+         }]}
         >
-        <Text style={{ fontSize: 25, color: "black", padding: 10}}>
+        <Text style={{ fontSize: 20, color: "gold", padding: 10}}>
         {item.text}
         </Text>
         </TouchableOpacity>
        ))}
+       <Text style={{color:"#b0e0e6", fontWeight: "bold"}}>{problems.filter((item)=>item.selected).length}/3 Selected </Text>
       </View>
   );
+ 
   
 }
+
+ 
+  const styles = StyleSheet.create({
+    card:{
+      padding : 3,
+      margin : 5,
+      borderRadius : 10,
+      borderWidth : 2,
+      width: "70%",
+      
+      
+
+    }
+
+  });
