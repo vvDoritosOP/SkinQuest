@@ -1,7 +1,9 @@
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Concerns() {
+  const router = useRouter();
   
   const [problems, setProblems] = useState([
 
@@ -65,10 +67,14 @@ export default function Concerns() {
         }}
         onPress={() => {
           if (problems.filter((item) => item.selected).length > 0) {
-            console.log("continue")
-          }
-
-        }}>
+            const selected = problems.filter((item)=>item.selected);
+            router.push({
+              pathname: "./facemodel",
+              params : { conners : JSON.stringify(selected)}
+          
+            })
+         
+        }}}>
        <Text style = {{fontSize:24, color:"#b0e0e6"}}>Continue</Text>
 
        </TouchableOpacity>
