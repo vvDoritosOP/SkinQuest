@@ -65,17 +65,20 @@ export default function Concerns() {
         borderRadius: 27,
         backgroundColor: "#e9967a",
         }}
-        onPress={() => {
-          if (problems.filter((item) => item.selected).length > 0) {
-            const selected = problems.filter((item)=>item.selected);
-            router.push({
-              pathname: "./facemodel",
-              params : { conners : JSON.stringify(selected)}
-          
-            })
-         
-        }}}>
-       <Text style = {{fontSize:24, color:"#b0e0e6"}}>Continue</Text>
+      onPress={() => {
+       const selected = problems
+       .filter((item) => item.selected)
+      .map((item) => item.text)
+     .join(",");
+
+     if (selected.length > 0) {
+    router.push({
+      pathname: "./facemodel",
+      params: { concerns: selected }
+    });
+  }
+}}>
+      <Text style = {{fontSize:24, color:"#b0e0e6"}}>Continue</Text>
 
        </TouchableOpacity>
 
