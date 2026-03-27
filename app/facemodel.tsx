@@ -130,33 +130,107 @@ backgroundColor: "black",
 <>
 <View style={{
 position: "absolute",
-bottom: 140,
-left: 50,
+bottom: 125,
+left: 60,
 alignSelf: "center",
 width: 35,
 height:7,
 borderRadius: 6,
-backgroundColor: "#bc8f8f"
+backgroundColor: "#bc8f8f",
+transform:[{ rotate:`330deg`}],
 }}></View>
 
 <View style={{
 position: "absolute",
-bottom: 140,
-right: 50,
+bottom: 125,
+right: 60,
 alignSelf: "center",
 width: 35,
 height:7,
 borderRadius: 6,
-backgroundColor: "#bc8f8f"
+backgroundColor: "#bc8f8f",
+transform:[{ rotate:`20deg`}],
 }}></View>
 </>
 )}
-  
+
+{concerns.includes("Redness")  && (
+<>
+<View style={{
+position: "absolute",
+bottom: 100,
+left: 40,
+width: 50,
+height: 50,
+borderRadius: 70,
+backgroundColor: "#cd5c5c",
+}}></View>
+<View style={{
+position: "absolute",
+bottom: 100,
+right: 40,
+width: 50,
+height: 50,
+borderRadius: 70,
+backgroundColor: "#cd5c5c",
+}}></View>
+</>
+)}
+
+{concerns.includes("Eye Bags") && (
+<>
+<View style={{
+position: "absolute",
+left: 65,
+top: 130,
+width: 45,
+height: 10,
+borderRadius: 25,
+backgroundColor: "grey",
+}}></View>
+<View style={{
+position: "absolute",
+right: 65,
+top: 130,
+width: 45,
+height: 10,
+borderRadius: 25,
+backgroundColor: "grey",
+}}></View>
+</>
+)}
+
+{concerns.includes("Oiliness") &&(
+<>
+<View style={{
+position:"absolute",
+left: 35,
+bottom: 75,
+width:50,
+height: 15,
+borderRadius: 25,
+backgroundColor: "#daa520",
+transform:[{ rotate: `200deg`}]
+}}></View>
+<View style={{
+position:"absolute",
+right: 35,
+bottom: 75,
+width:50,
+height: 15,
+borderRadius: 25,
+backgroundColor: "#daa520",
+transform:[{ rotate: `160deg`}]
+}}></View>
+
+</>
+)}
+
 </View>
       
       
       {concerns.map((name, index) => (
-        <Text key={index} style={{ fontSize: 20, color: "red", padding: 10 }}>
+        <Text key={index} style={{ fontSize: 20, color: "red", padding: 10, fontWeight: "bold" }}>
           {name}
         </Text>
       ))}

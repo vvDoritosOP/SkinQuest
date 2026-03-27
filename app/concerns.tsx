@@ -12,7 +12,7 @@ export default function Concerns() {
     { id: 3, text: `Wrinkles`, selected: false},
     { id: 4, text: `Redness`, selected: false},
     { id: 5, text: `Eye Bags`, selected: false},
-    { id: 6, text: `Oillness`, selected: false},
+    { id: 6, text: `Oiliness`, selected: false},
   ]);
 
   function toggleConcerns(id){
