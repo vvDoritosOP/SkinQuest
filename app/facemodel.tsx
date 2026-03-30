@@ -247,8 +247,19 @@ transform:[{ rotate: `160deg`}]
 )}
 
 </View>
-      <Text style={{ color: "#f08080", fontSize: 24, fontWeight: "bold", marginBottom: 10, justifyContent: "center",}}> Enemy HP: {enemyHP}/100</Text> 
-      
+      <Text style={{ color: "#f08080", fontSize: 24, fontWeight: "bold", marginBottom: 10, justifyContent: "center",}}> Enemy HP: {enemyHP}/100
+      </Text> 
+      {enemyHP <= 0 && (
+
+        <Text style ={{
+          position: "absolute",
+          top : 125,
+          fontWeight: "bold",
+          fontSize: 45,
+          color: "gold",
+
+        }}>Defeated, Congrats</Text>
+      )}
       {concerns.map((name, index) => (
         <Text key={index} style={{ fontSize: 20, color: "#f08080", padding: 10, fontWeight: "bold" }}>
           {name}
