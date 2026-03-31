@@ -5,7 +5,8 @@ import { Text, TouchableOpacity, View } from "react-native";
 export default function FaceModel() {
   const params = useGlobalSearchParams();
   const damage = params.damage ? Number(params.damage) :0;
-  const [enemyHP, setEnemyHP] = useState(100 - damage);
+  const hp = params.hp ? Number(params.hp) : 100;
+  const [enemyHP, setEnemyHP] = useState(hp);
   const router = useRouter();
   const concerns = params.concerns ? String(params.concerns).split(",") : [];
   const streak = params.streak ? Number(params.streak) :0;
@@ -294,6 +295,7 @@ position: "absolute",
       params: { 
         concerns: String(params.concerns) ,
         streak : String(streak),
+        currentHP : String(enemyHP),
       }
   })}
 >
