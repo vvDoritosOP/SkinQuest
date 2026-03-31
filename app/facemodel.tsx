@@ -12,7 +12,7 @@ export default function FaceModel() {
 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#d2b48c" }}>
-      <Text style={{ fontSize: 24, color: "#b0e0e6", marginBottom: 20 , fontWeight: "bold"}}>Your Enemies</Text>
+      <Text style={{ fontSize: 24, color: "#b0e0e6", position: "absolute",top:130 , fontWeight: "bold"}}>Breakouts</Text>
       
       
       
@@ -243,11 +243,31 @@ backgroundColor: "#daa520",
 opacity: enemyHP/100,
 transform:[{ rotate: `160deg`}]
 }}></View>
-
 </>
 )}
+</View>
+
+<View style={{
+  position: "absolute",
+  top: 170,
+  width: 200,
+  height: 40,
+  borderRadius: 30,
+  backgroundColor: "grey",
+}}>
+<View style={{
+position: "absolute",
+  top: 0,
+  width: enemyHP * 2,
+  height: 40,
+  borderRadius: 30,
+  backgroundColor: enemyHP > 60 ? "green" : enemyHP > 30 ? "yellow" : "red",
+
+}}></View>
 
 </View>
+
+
       <Text style={{ color: "#f08080", fontSize: 24, fontWeight: "bold", marginBottom: 10, justifyContent: "center",}}> Enemy HP: {enemyHP}/100
       </Text> 
       {enemyHP <= 0 && (
