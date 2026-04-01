@@ -298,6 +298,7 @@ position: "absolute",
         concerns: String(params.concerns) ,
         streak : String(streak),
         currentHP : String(enemyHP),
+        stage: String(stage),
       }
   })}
 >

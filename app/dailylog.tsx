@@ -59,7 +59,7 @@ function toggleDailyLog(id){
               concerns : String(concerns),
               hp: String(Math.max(0, Number(currentHP) - (completed * 15))),
               streak: String(Number(streak) +1),
-              stage: String(Number(stage) +1)
+              stage: String(stage)
               
             }
           });
