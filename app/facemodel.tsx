@@ -5,8 +5,9 @@ import { Text, TouchableOpacity, View } from "react-native";
 export default function FaceModel() {
   const params = useGlobalSearchParams();
   const damage = params.damage ? Number(params.damage) :0;
-   const stage = params.stage ? Number(params.stage) :1;
+ const stage = params.stage ? Number(params.stage) :1;
   const hp = params.hp ? Number(params.hp) : 100 + (stage -1) * 50;
+  const maxHp = 100 + (stage -1) * 50;
   const [enemyHP, setEnemyHP] = useState(hp);
   const router = useRouter();
   const concerns = params.concerns ? String(params.concerns).split(",") : [];
@@ -261,10 +262,10 @@ transform:[{ rotate: `160deg`}]
 <View style={{
 position: "absolute",
   top:0,
-  width: enemyHP * 2.5,
+  width: (enemyHP/maxHp) *250,
   height: 40,
   borderRadius: 30,
-  backgroundColor: enemyHP > 60 ? "green" : enemyHP > 30 ? "yellow" : "red",
+  backgroundColor: enemyHP > maxHp * 0.6 ? "green" : enemyHP > maxHp * 0.3 ? "yellow" : "red",
 
 }}></View>
 
