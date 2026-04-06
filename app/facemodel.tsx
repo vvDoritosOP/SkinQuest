@@ -163,26 +163,26 @@ opacity: enemyHP/100,
 
 {concerns.includes("Eye Bags") && (
 <>
-<View style={{
+<Image 
+source={require("@/assets/eyebags.png")}
+style={{
 position: "absolute",
-left: 65,
-top: 130,
-width: 45,
-height: 10,
-borderRadius: 25,
-backgroundColor: "grey",
+left: 115,
+top: 275,
+width: 195,
+height: 65,
 opacity: enemyHP/100,
-}}></View>
-<View style={{
+}}/>
+<Image
+source={require("@/assets/eyebags.png")}
+style={{
 position: "absolute",
-right: 65,
-top: 130,
-width: 45,
-height: 10,
-borderRadius: 25,
-backgroundColor: "grey",
+right: 145,
+top: 265,
+width: 195,
+height: 65,
 opacity: enemyHP/100,
-}}></View>
+}}/>
 </>
 )}
 
