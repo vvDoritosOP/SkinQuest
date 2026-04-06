@@ -112,8 +112,8 @@ opacity: enemyHP/100,
 source={require("@/assets/wrinkles.png")} 
 style={{
 position: "absolute",
-bottom: 250,
-left: 170,
+bottom: 235,
+left: 155,
 alignSelf: "center",
 width: 95,
 height:100,
@@ -137,26 +137,26 @@ opacity: enemyHP/100,
 
 {concerns.includes("Redness")  && (
 <>
-<View style={{
+<Image 
+source={require("@/assets/redness.png")} 
+style={{
 position: "absolute",
-bottom: 100,
+bottom: 185,
 left: 40,
-width: 50,
-height: 50,
-borderRadius: 70,
-backgroundColor: "#cd5c5c",
+width: 250,
+height: 250,
 opacity: enemyHP/100,
-}}></View>
-<View style={{
+}}/>
+<Image
+source={require("@/assets/redness.png")} 
+style={{
 position: "absolute",
-bottom: 100,
-right: 40,
-width: 50,
-height: 50,
-borderRadius: 70,
-backgroundColor: "#cd5c5c",
+bottom: 195,
+right: 45,
+width: 250,
+height: 250,
 opacity: enemyHP/100,
-}}></View>
+}}/>
 </>
 )}
 
@@ -166,7 +166,7 @@ opacity: enemyHP/100,
 source={require("@/assets/eyebags.png")}
 style={{
 position: "absolute",
-left: 115,
+left: 120,
 top: 275,
 width: 195,
 height: 65,
