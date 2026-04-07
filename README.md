@@ -18,22 +18,30 @@ Screenshots
   <img src="./Screenshot4.png" width="200"/>
   <img src="./Screenshot5.png" width="200"/>
 </p>
-Tech Stack
+Tech Stack:
 
 React Native
+
 TypeScript
+
 Expo
+
 Custom artwork designed in Procreate
 
-Features
+Features:
 
 Skin concern selection with persistent state
+
 Enemy HP system that responds to daily routine logging
+
 Streak tracking to encourage consistency
+
 Fully custom hand-drawn artwork for all characters and products
+
 Cross platform support via Expo
 
-Getting Started
+Getting Started:
+
 bash# Clone the repo
 git clone https://github.com/danielflores-dev/skinquest
 
