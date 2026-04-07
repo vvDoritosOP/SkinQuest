@@ -42,7 +42,8 @@ npm install
 
 # Start the app
 npx expo start
-Status
-Currently in development — core gameplay loop is functional, additional features in progress.
+
+Status: Currently in development, core gameplay loop is functional, additional features in progress.
+
 Author
 Daniel Flores — github.com/danielflores-dev
