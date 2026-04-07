@@ -2,10 +2,10 @@ SkinQuest
 A skincare mobile app built with React Native and TypeScript. Fight your skin concerns by logging your daily skincare routine and the more consistent you are, the more damage you deal to your enemies.
 How It Works:
 
-Select your skincare products — choose from your real life routine (Cleanser, Moisturizer, Sunscreen, and more)
-Face your enemy — a character appears on screen representing your skin concerns (Acne, Blackheads, Redness, Eye Bags, and more)
-Log your routine daily — each day you log your products, your enemy takes damage
-Build your streak — stay consistent to keep dealing damage and watch your skin concerns shrink over time
+Select your skincare products : choose from your real life routine (Cleanser, Moisturizer, Sunscreen, and more)
+Face your enemy : a character appears on screen representing your skin concerns (Acne, Blackheads, Redness, Eye Bags, and more)
+Log your routine daily : each day you log your products, your enemy takes damage
+Build your streak : stay consistent to keep dealing damage and watch your skin concerns shrink over time
 
 Screenshots
 <p float="left">
