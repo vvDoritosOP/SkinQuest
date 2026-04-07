@@ -1,5 +1,5 @@
-SkinQuest
-A skincare mobile app built with React Native and TypeScript. Fight your skin concerns by logging your daily skincare routine and the more consistent you are, the more damage you deal to your enemies.
+SkinQuest: A skincare mobile app built with React Native and TypeScript. Fight your skin concerns by logging your daily skincare routine and the more consistent you are, the more damage you deal to your enemies.
+
 How It Works:
 
 Select your skincare products : choose from your real life routine (Cleanser, Moisturizer, Sunscreen, and more)
