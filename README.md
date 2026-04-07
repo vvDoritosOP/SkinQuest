@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+SkinQuest
+A skincare mobile app built with React Native and TypeScript. Fight your skin concerns by logging your daily skincare routine and the more consistent you are, the more damage you deal to your enemies.
+How It Works:
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Select your skincare products — choose from your real life routine (Cleanser, Moisturizer, Sunscreen, and more)
+Face your enemy — a character appears on screen representing your skin concerns (Acne, Blackheads, Redness, Eye Bags, and more)
+Log your routine daily — each day you log your products, your enemy takes damage
+Build your streak — stay consistent to keep dealing damage and watch your skin concerns shrink over time
 
-## Get started
+Screenshots
+<p float="left">
+  <img src="./Screenshot1.png" width="200"/>
+  <img src="./Screenshot2.png" width="200"/>
+  <img src="./Screenshot3.png" width="200"/>
+  <img src="./Screenshot4.png" width="200"/>
+  <img src="./Screenshot5.png" width="200"/>
+</p>
+Tech Stack
 
-1. Install dependencies
+React Native
+TypeScript
+Expo
+Custom artwork designed in Procreate
 
-   ```bash
-   npm install
-   ```
+Features
 
-2. Start the app
+Skin concern selection with persistent state
+Enemy HP system that responds to daily routine logging
+Streak tracking to encourage consistency
+Fully custom hand-drawn artwork for all characters and products
+Cross platform support via Expo
 
-   ```bash
-   npx expo start
-   ```
+Getting Started
+bash# Clone the repo
+git clone https://github.com/danielflores-dev/skinquest
 
-In the output, you'll find options to open the app in a
+# Install dependencies
+npm install
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# Start the app
+npx expo start
+Status
+Currently in development — core gameplay loop is functional, additional features in progress.
+Author
+Daniel Flores — github.com/danielflores-dev
