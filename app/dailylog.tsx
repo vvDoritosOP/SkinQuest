@@ -91,7 +91,29 @@ function toggleDailyLog(id){
 
     </TouchableOpacity>
     
+    <TouchableOpacity onPress={() => router.back()}
+      style={{
+      position: "absolute",
+      right: 650,
+      bottom: 1250,
+      backgroundColor: "#cd5c5c",
+      borderRadius:55,
+      height:75,
+      width:75, 
+      alignItems: "center",
+      justifyContent: "center"
+      }}>
+   
+    <Text style={{
+     
+      color: "gold",
+      fontWeight: "bold"
+    }}>Back</Text>
+    
+   
 
+
+    </TouchableOpacity>
    
   
     </View>
