@@ -219,28 +219,28 @@ opacity: enemyHP/100,
 
 {concerns.includes("Oiliness") &&(
 <>
-<View style={{
+<Image
+source={require("@/assets/oil.png")} 
+style={{
 position:"absolute",
-left: 35,
-bottom: 75,
-width:50,
-height: 15,
-borderRadius: 25,
-backgroundColor: "#daa520",
+left: 125,
+bottom: 95,
+width:180,
+height: 180,
 opacity: enemyHP/100,
-transform:[{ rotate: `200deg`}]
-}}></View>
-<View style={{
+
+}}/>
+<Image 
+source={require("@/assets/oil.png")} 
+style={{
 position:"absolute",
-right: 35,
-bottom: 75,
-width:50,
-height: 15,
-borderRadius: 25,
-backgroundColor: "#daa520",
+right: 145,
+bottom: 105,
+width:180,
+height: 180,
 opacity: enemyHP/100,
-transform:[{ rotate: `160deg`}]
-}}></View>
+
+}}/>
 </>
 )}
 </View>
