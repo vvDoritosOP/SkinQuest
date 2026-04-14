@@ -282,15 +282,18 @@ opacity: enemyHP/100,
       }
   })}}
 >
-  <Text style={{ fontSize: 24, color: "#b0e0e6" }}>Log Today's Routine</Text>
+  <Text style={{ fontSize: 24, color: "#b0e0e6", fontWeight:
+    "bold"
+   }}>Log Today's Routine</Text>
 </TouchableOpacity>
     
     
  <Text style={{
 position: "absolute",
-bottom: 145, 
+bottom: 55, 
  fontSize: 20,
-  color: "white",
+  color: "gold",
+  fontWeight: "bold"
  }}>Streak: {streak}</Text> 
 
    
@@ -326,12 +329,12 @@ color: "gold"
        <TouchableOpacity onPress={() => router.back()}
          style={{
          position: "absolute",
-         right: 650,
-         bottom: 1250,
+         right: 320,
+         bottom: 770,
          backgroundColor: "#cd5c5c",
          borderRadius:55,
-         height:75,
-         width:75, 
+         height:65,
+         width:65, 
          alignItems: "center",
          justifyContent: "center"
          }}>

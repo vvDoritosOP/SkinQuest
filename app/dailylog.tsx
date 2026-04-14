@@ -39,13 +39,13 @@ function toggleDailyLog(id){
      {item.selected && (
       <Image
       source={item.glow}
-      style={{width: 280, height: 230, position: "absolute"}}
+      style={{width: 280, height: 230, position: "absolute", top : -20, left : 40}}
       />
       )}
     
     <Image
     source = {item.image}
-    style={{width:250, height:250}}
+    style={{width:252, height:150}}
     />
    
    
@@ -103,12 +103,12 @@ function toggleDailyLog(id){
     <TouchableOpacity onPress={() => router.back()}
       style={{
       position: "absolute",
-      right: 650,
-      bottom: 1250,
+      right: 370,
+      bottom: 750,
       backgroundColor: "#cd5c5c",
       borderRadius:55,
-      height:75,
-      width:75, 
+      height:55,
+      width:55, 
       alignItems: "center",
       justifyContent: "center"
       }}>
