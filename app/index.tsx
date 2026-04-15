@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { db } from "./firebaseConfig";
 
 
@@ -28,8 +28,16 @@ export default function App(){
 
 
     return(
-    <View style={styles.container}> 
-     <Text style={styles.text}>SkinQuest</Text>
+    <ImageBackground 
+    source={require("@/assets/background.png")}
+    style={styles.container}
+    resizeMode="cover"
+    > 
+     
+   <Image 
+     source={require("@/assets/title2.png")} 
+     style={{position: "absolute", height: 250, width: 450, top: 150, right: -17
+    }}/>
       <Text style={styles.textDesc}>Your Skincare journey reimagined</Text>
       <TouchableOpacity style={styles.button} 
       onPress={() => router.push("./concerns")}>
@@ -38,15 +46,21 @@ export default function App(){
 
       {hasSave && (
         <TouchableOpacity
-          style={{ backgroundColor: "green", padding: 15, borderRadius: 27, marginTop: 20 }}
           onPress={() => router.push("./facemodel")}
         >
-          <Text style={{ fontSize: 20, color: "white" }}>Continue Progress</Text>
+        <ImageBackground 
+    source={require("@/assets/green.png")}
+    style={{position: "absolute", bottom: -400,right: -205, height: 200, width: 400, justifyContent: "center", alignItems: "center"}}
+    resizeMode="contain"
+    >
+          <Text style={{ fontSize: 20, color: "#ce97df", fontWeight: "bold", }}>Continue Progress</Text>
+        
+        </ImageBackground>
         </TouchableOpacity>
       )}
 
 
-    </View>
+    </ImageBackground>
     );
     
   }
@@ -56,17 +70,26 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#d2b48c"
+    
   },
   buttonText:{
     fontSize : 28,
     color: "#b0e0e6",
+    fontWeight: "bold",
+    textAlign: "center",
+    
     
   },
   button:{
-    backgroundColor: "#e9967a",
-    padding: 15,
-    borderRadius: 27,
+    
+    width: 220, 
+    height: 150,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+  top: 550
+    
 
   },
   text:{
@@ -77,8 +100,10 @@ const styles = StyleSheet.create({
     
   },
   textDesc:{
-    fontSize:20,
+    fontSize:25,
     color: "#b8860b",
     marginBottom:40,
+    fontWeight:"bold",
+    position: "absolute", top: 450
   }
 });
