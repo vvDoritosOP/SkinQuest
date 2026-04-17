@@ -1,7 +1,7 @@
 import { useGlobalSearchParams, useRouter } from "expo-router";
 import { doc, setDoc } from "firebase/firestore";
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { db } from "./firebaseConfig";
 
 export default function DailyLog(){
@@ -25,21 +25,24 @@ function toggleDailyLog(id){
   })});
   }
   return (
-    <View style={{backgroundColor:"#d2b48c", flex: 1, alignItems: "center", justifyContent: "space-between" , paddingVertical:50}}>
+    <ImageBackground 
+                source={require("@/assets/background.png")}
+                style={styles.container}
+                resizeMode="cover"
+                > 
     <Text style={{fontSize: 24, color: "#b0e0e6", fontWeight:"bold"}}>Select Your Skincare Products!</Text>
 
     {products.map((item) =>(
     <TouchableOpacity
     key={item.id}
     onPress= {() => toggleDailyLog(item.id)}
-    style={[styles.card,  {backgroundColor: item.selected ? "transparent" : "#e9967a", 
-     }]}    
+    style={[styles.card]}    
     >
 
      {item.selected && (
       <Image
       source={item.glow}
-      style={{width: 280, height: 230, position: "absolute", top : -20, left : 40}}
+      style={{width: 280, height: 230, position: "absolute", top : -24, left : 40}}
       />
       )}
     
@@ -63,7 +66,7 @@ function toggleDailyLog(id){
       marginTop:10,
       padding:15,
       borderRadius:27,
-      backgroundColor: "#e9967a",
+      backgroundColor: "#e62922",
       }}
      onPress={async () => {
         const completed = products.filter((item) => item.selected).length;
@@ -121,7 +124,7 @@ function toggleDailyLog(id){
     </TouchableOpacity>
    
   
-    </View>
+    </ImageBackground>
 )}
 
 const styles = StyleSheet.create({
@@ -132,7 +135,15 @@ const styles = StyleSheet.create({
       borderWidth : 0,
       width: "80%",
       alignItems: "center",  
-      
-      
-
-    }})
+      },
+     
+   container: {
+     flex: 1,
+     alignItems: "center",
+     justifyContent: "center",
+   },
+  
+    
+    
+    
+    })

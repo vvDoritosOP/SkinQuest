@@ -1,7 +1,7 @@
 import { useGlobalSearchParams, useRouter } from "expo-router";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { db } from "./firebaseConfig";
 
 
@@ -47,7 +47,11 @@ useEffect(() => {
 
 
 return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#d2b48c" }}>
+    <ImageBackground 
+            source={require("@/assets/background.png")}
+            style={styles.container}
+            resizeMode="cover"
+            > 
       <View style={{ width: 350, height: 420}}>
         <Image
         source={require("@/assets/face.png")}
@@ -263,13 +267,13 @@ opacity: enemyHP/100,
         }}>Defeated Stage {stage +1}!</Text>
       )}
       {concerns.map((name, index) => (
-        <Text key={index} style={{ fontSize: 20, color: "#f08080", padding: 10, fontWeight: "bold" }}>
+        <Text key={index} style={{ fontSize: 20, color: "#a00606", padding: 10, fontWeight: "bold" }}>
           {name}
         </Text>
       ))}
 
       <TouchableOpacity
-  style={{ backgroundColor: "#e9967a", padding: 15, borderRadius: 27, marginTop: 20 }}
+  style={{ backgroundColor: "#107429", padding: 15, borderRadius: 27, marginTop: 20 }}
   onPress={async () => {
     
     router.push({
@@ -282,7 +286,7 @@ opacity: enemyHP/100,
       }
   })}}
 >
-  <Text style={{ fontSize: 24, color: "#b0e0e6", fontWeight:
+  <Text style={{ fontSize: 24, color: "#8fff26", fontWeight:
     "bold"
    }}>Log Today's Routine</Text>
 </TouchableOpacity>
@@ -345,11 +349,17 @@ color: "gold"
          fontWeight: "bold"
        }}>Back</Text>
        </TouchableOpacity>
-    </View>
+    </ImageBackground>
   
 
         
 );
- 
+ }
 
-}
+ const styles = StyleSheet.create({
+   container: {
+     flex: 1,
+     alignItems: "center",
+     justifyContent: "center",
+   },
+  })
