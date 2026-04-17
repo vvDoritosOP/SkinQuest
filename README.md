@@ -12,11 +12,11 @@ Build your streak : stay consistent to keep dealing damage and watch your skin c
 
 Screenshots
 <p float="left">
-  <img src="./Screenshot1.png" width="200"/>
-  <img src="./Screenshot2.png" width="200"/>
-  <img src="./Screenshot3.png" width="200"/>
-  <img src="./Screenshot4.png" width="200"/>
-  <img src="./Screenshot5.png" width="200"/>
+  <img src="./IMG1.png" width="200"/>
+  <img src="./IMG2.png" width="200"/>
+  <img src="./IMG3.png" width="200"/>
+  <img src="./IMG4.png" width="200"/>
+ 
 </p>
 Tech Stack:
 
