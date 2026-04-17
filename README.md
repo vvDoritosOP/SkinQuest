@@ -1,57 +1,36 @@
-SkinQuest: A skincare mobile app built with React Native and TypeScript. Fight your skin concerns by logging your daily skincare routine and the more consistent you are, the more damage you deal to your enemies.
+# SkinQuest
 
-How It Works:
+A gamified skincare app that helps users stay consistent with their routines by visualizing skin concerns as enemies that fade and shrink over time.
 
-Select your skincare products : choose from your real life routine (Cleanser, Moisturizer, Sunscreen, and more)
+## Screenshots
 
-Face your enemy : a character appears on screen representing your skin concerns (Acne, Blackheads, Redness, Eye Bags, and more)
+![Welcome Screen](./IMG1.png)
+![Concerns Screen](./IMG2.png)
+![Face Model](./IMG3.png)
+![Daily Log](./IMG4.png)
 
-Log your routine daily : each day you log your products, your enemy takes damage
+## Features
 
-Build your streak : stay consistent to keep dealing damage and watch your skin concerns shrink over time
+- Select up to 3 skin concerns (Acne, Blackheads, Wrinkles, Redness, Eye Bags, Oiliness)
+- Custom hand drawn enemies appear on a face model
+- Log daily skincare routine to deal damage to enemies
+- Enemies fade and shrink as HP drops
+- Stage progression with scaling difficulty
+- Streak counter to track consistency
+- Progress saved with Firebase
+- All artwork created in Procreate
 
-Screenshots
-<p float="left">
-  <img src="./Screenshot1.png" width="200"/>
-  <img src="./Screenshot2.png" width="200"/>
-  <img src="./Screenshot3.png" width="200"/>
-  <img src="./Screenshot4.png" width="200"/>
-  <img src="./Screenshot5.png" width="200"/>
-</p>
-Tech Stack:
+## Tech Stack
 
-React Native
+- React Native with Expo
+- TypeScript
+- Expo Router
+- Firebase Firestore
+- Procreate (artwork)
+- Git/GitHub
 
-TypeScript
+## How to Run
 
-Expo
-
-Custom artwork designed in Procreate
-
-Features:
-
-Skin concern selection with persistent state
-
-Enemy HP system that responds to daily routine logging
-
-Streak tracking to encourage consistency
-
-Fully custom hand-drawn artwork for all characters and products
-
-Cross platform support via Expo
-
-Getting Started:
-
-bash# Clone the repo
-git clone https://github.com/danielflores-dev/skinquest
-
-# Install dependencies
-npm install
-
-# Start the app
-npx expo start
-
-Status: Currently in development, core gameplay loop is functional, additional features in progress.
-
-Author
-Daniel Flores — github.com/danielflores-dev
+1. Clone the repo: `git clone https://github.com/danielflores-dev/SkinQuest.git`
+2. Install dependencies: `npm install`
+3. Start the app: `npx expo start`
