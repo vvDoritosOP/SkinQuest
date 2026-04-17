@@ -4,11 +4,9 @@ A gamified skincare app that helps users stay consistent with their routines by 
 
 ## Screenshots
 
-![Welcome Screen](./IMG1.png)
-![Concerns Screen](./IMG2.png)
-![Face Model](./IMG3.png)
-![Daily Log](./IMG4.png)
+## Screenshots
 
+<img src="./IMG1.png" width="200"> <img src="./IMG2.png" width="200"> <img src="./IMG3.png" width="200"> <img src="./IMG4.png" width="200">
 ## Features
 
 - Select up to 3 skin concerns (Acne, Blackheads, Wrinkles, Redness, Eye Bags, Oiliness)
