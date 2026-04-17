@@ -2,7 +2,6 @@
 
 A gamified skincare app that helps users stay consistent with their routines by visualizing skin concerns as enemies that fade and shrink over time.
 
-## Screenshots
 
 ## Screenshots
 
