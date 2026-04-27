@@ -24,7 +24,8 @@ export default function FaceModel() {
   const [coin, setCoin] = useState(params.coin ? Number(params.coin) :0);
   const totalHearts=5;
   const fullHearts= Math.round((enemyHP / maxHp) * totalHearts);
-  const multiplier = Math.floor(coin / 3) * 0.25
+  const multiplier = Math.floor(coin / 3) * 0.25;
+  const purchased = params.purchased ? String(params.purchased).split(",") : [];
  
 
 useEffect(() => {
@@ -307,7 +308,7 @@ bottom: 55,
    
 {enemyHP <=0 && (   
 <TouchableOpacity style={{
-backgroundColor: "#e9967a", 
+backgroundColor: "#fdc200", 
 padding: 15,
 borderRadius: 27, 
 position : "absolute", 
@@ -329,7 +330,8 @@ onPress={() => router.push({
 
 ><Text style={{
 fontSize: 24,
-color: "gold"
+color: "#795e06",
+fontWeight: "bold"
 
 }}
 >Continue to Stage {stage + 1}!</Text>
@@ -365,7 +367,13 @@ color: "gold"
     
     <TouchableOpacity onPress={async () => router.push({
       pathname: "./shop",
-      params: { coin : String(coin)}
+      params: { 
+  coin: String(coin),
+  concerns: concerns.join(","),
+  hp: String(enemyHP),
+  streak: String(streak),
+  stage: String(stage),
+}
     })}
     style={{
       backgroundColor:"#096418",
@@ -383,6 +391,13 @@ color: "gold"
     </TouchableOpacity>
     
     
+   {purchased.includes("baseball hat") && (
+  <Image 
+    source={require("@/assets/bbhat.png")}
+    style={{ position: "absolute", top: 180, left: 5, width: 400, height: 400 }}
+  />
+)}
+
     </ImageBackground>
 );
  }

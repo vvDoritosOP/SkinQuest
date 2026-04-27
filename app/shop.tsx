@@ -14,7 +14,7 @@ export default function Shop () {
         {id:22, text: "spikey hair", selected: false, price: 2},
         {id:23, text:"ear piercings", selected: false, price: 1}
     ])
-    
+ 
   function buyItem(id) {
   const tappedItem = shop.find((item) => item.id === id);
   
@@ -65,15 +65,23 @@ export default function Shop () {
 ))}
     
     
-        <TouchableOpacity onPress={() => router.push({
-          pathname:"./facemodel",
-          params:{ coin: String(coin), concerns: String(concerns),
-         hp: String(hp),
-         streak: String(streak),
-         stage: String(stage),}
-
-
-        })}
+        <TouchableOpacity onPress={() => {
+  const purchased = shop
+    .filter((item) => item.selected)
+    .map((item) => item.text)
+    .join(",");
+  router.push({
+    pathname: "./facemodel",
+    params: { 
+      coin: String(coin), 
+      concerns: String(concerns),
+      hp: String(hp),
+      streak: String(streak),
+      stage: String(stage),
+      purchased: purchased,
+    }
+  });
+}}
          style={{
          position: "absolute",
          right: 340,
