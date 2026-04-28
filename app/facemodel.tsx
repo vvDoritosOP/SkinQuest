@@ -358,10 +358,16 @@ fontWeight: "bold"
        </TouchableOpacity>
 
 
-      <Text style={{color: "#05790b", fontSize: 24, fontWeight: "bold", right: -145, top: -700 }}>
-       coins: {coin}
+      <Image
+    source={require("@/assets/coinpng.png")} style={{ right: -150, top: -650 , width: 90, height: 50}}
+       
+      /> 
+       
+       
+      <Text style={{color: "#ffe431", fontSize: 20, fontWeight: "bold", right: -185, top: -695 }}>
+        {coin} 
       </Text>
-       <Text style={{color: "#6d075f", fontSize: 20, fontWeight: "bold", right: -145, top: -695 }}>
+      <Text style={{ color: "#ff0101", fontSize: 16, fontWeight: "bold", right: -185, top: -695}}>
         {multiplier}x
       </Text>
     
@@ -378,10 +384,10 @@ fontWeight: "bold"
     style={{
       backgroundColor:"#096418",
       position:"absolute",
-      right: 67,
-      top: 400,
-      width: 60,
-      height: 60,
+      right: 42,
+      top: 220,
+      width: 50,
+      height: 50,
       borderRadius: 30,
       alignItems: "center",
       justifyContent: "center"
@@ -403,7 +409,12 @@ fontWeight: "bold"
     style={{ position: "absolute", top: 72, left: 55, width: 400, height: 400 }}
   />
 )}
-
+ {purchased.includes("ear piercings") && (
+  <Image 
+    source={require("@/assets/earp.png")}
+    style={{ position: "absolute", top: 122, left: 53, width: 400, height: 400 }}
+  />
+)}
     </ImageBackground>
 );
  }
