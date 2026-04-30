@@ -28,6 +28,8 @@ export default function FaceModel() {
   const purchased = params.purchased ? String(params.purchased).split(",") : [];
  
 
+
+
 useEffect(() => {
   if (params.hp || params.concerns) return;
   async function loadProgress() {
@@ -56,6 +58,7 @@ return (
             style={styles.container}
             resizeMode="cover"
             > 
+           
       <View style={{ width: 350, height: 420}}>
         <Image
         source={require("@/assets/face.png")}

@@ -1,12 +1,29 @@
 import { useRouter } from "expo-router";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { ImageBackground, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { db } from "./firebaseConfig";
 
+const JitterImage = ({ frames, speed = 300, style, children, resizeMode = "cover" }) => {
+  const [currentFrame, setCurrentFrame] = useState(0);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentFrame((prev) => (prev + 1) % frames.length);
+    }, speed);
+    return () => clearInterval(timer);
+  }, [frames, speed]);
 
-
+ return (
+    <ImageBackground
+      source={frames[currentFrame]}
+      style={style}
+      resizeMode={resizeMode}
+    >
+      {children}
+    </ImageBackground>
+  );
+};
 
 export default function App(){
   const router = useRouter();
@@ -27,18 +44,48 @@ export default function App(){
   }, []);
 
 
-    return(
-    <ImageBackground 
-    source={require("@/assets/background.png")}
+    const titleFrames = [
+    require("@/assets/title2.png"),
+    require("@/assets/SQ2.png"),
+    require("@/assets/SQ3.png"),
+    ]
+
+    const backFrames = [
+    require("@/assets/background.png"),
+    require("@/assets/background2.png"),
+    require("@/assets/background3.png"),
+    ]
+
+   
+
+  return (
+  <JitterImage
+    frames={backFrames}
+    speed={375}
     style={styles.container}
     resizeMode="cover"
-    > 
-     
-   <Image 
-     source={require("@/assets/title2.png")} 
-     style={{position: "absolute", height: 250, width: 450, top: 150, right: -17
-    }}/>
-      <Text style={styles.textDesc}>Your Skincare journey reimagined</Text>
+  >
+    <Text style={styles.textDesc}>Your Skincare journey reimagined</Text>
+
+    <JitterImage
+      frames={titleFrames}
+      speed={375}
+      style={{ position: "absolute", height: 250, width: 450, top: 150, right: -17 }}
+    />
+
+    <TouchableOpacity 
+      style={styles.button}
+      onPress={() => router.push("./concerns")}
+    >
+    </TouchableOpacity>
+
+    {hasSave && (
+      <TouchableOpacity onPress={() => router.push("./facemodel")}>
+      
+      </TouchableOpacity>
+    )}
+    
+    <Text style={styles.textDesc}>Your Skincare journey reimagined</Text>
       <TouchableOpacity style={styles.button} 
       onPress={() => router.push("./concerns")}>
          <ImageBackground 
@@ -65,7 +112,7 @@ export default function App(){
       )}
 
 
-    </ImageBackground>
+    </JitterImage>
     );
     
   }
